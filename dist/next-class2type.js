@@ -5,7 +5,7 @@
   var types = 'Boolean Number String Function Array Date RegExp Object Error'.split(' ');
   var class2type = {};
   var NULL = 'Null';
-  var Undf = 'Undefined';
+  var UNDF = 'Undefined';
   var NAN = 'NaN';
 
   //populate class2type map:
@@ -15,7 +15,7 @@
 
   nx.class2type = function(inTarget) {
     if (inTarget === null) return NULL;
-    if (inTarget === void 0) return Undf;
+    if (inTarget === void 0) return UNDF;
     if (inTarget !== inTarget) return NAN;
     return class2type[toStirng.call(inTarget)];
   };
