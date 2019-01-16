@@ -6,6 +6,7 @@
   var class2type = {};
   var NULL = 'Null';
   var Undf = 'Undefined';
+  var NAN = 'NaN';
 
   //populate class2type map:
   types.forEach(function(type) {
@@ -15,6 +16,7 @@
   nx.class2type = function(inTarget) {
     if (inTarget === null) return NULL;
     if (inTarget === void 0) return Undf;
+    if (inTarget !== inTarget) return NAN;
     return class2type[toStirng.call(inTarget)];
   };
 

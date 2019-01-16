@@ -14,6 +14,7 @@ test('nx.class2type', function() {
   var v10 = function() {};
   var v11 = {};
   var v12 = ['arr1'];
+  var v13 = NaN;
 
   expect(nx.class2type(v1)).toBe('Null');
   expect(nx.class2type(v2)).toBe('Undefined');
@@ -27,4 +28,5 @@ test('nx.class2type', function() {
   expect(nx.class2type(v10)).toBe('Function');
   expect(nx.class2type(v11)).toBe('Object');
   expect(nx.class2type(v12)).toBe('Array');
+  expect(nx.class2type(v13)).toBe('NaN');
 });
